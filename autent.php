@@ -44,7 +44,11 @@ if (!isset($_POST['username'], $_POST['password'])) {
         header('Location: inicio.php');
     } else {
         // usuario incorrecto o error en la respuesta
-        header('Location: index.html');
+        echo'<script type="text/javascript">
+            alert("Usuario o Contraseña incorrectos");
+            window.location.href="index.html";
+            </script>';
+        //header('Location: index.html');
         
     }
 }
